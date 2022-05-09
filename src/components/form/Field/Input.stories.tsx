@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import { Field } from './Field.component';
 
 export default {
-  title: 'Components/Field/Input',
+  title: 'Components/form/Field/Input',
   component: Field.Input,
   subcomponents: { Field, label: Field.Label },
 } as Meta;
