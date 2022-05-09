@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StyledLabel } from '../Field.styles';
-import { FieldContext } from '../../../utils/context/fieldContext';
+import { FieldContext } from '../../../../utils/context/fieldContext';
 
 export const Label = React.forwardRef<
   HTMLLabelElement,

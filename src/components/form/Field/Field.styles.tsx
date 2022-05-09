@@ -4,7 +4,7 @@ import {
   SECONDARY_TEXT_COLOR,
   PRIMARY_COLOR,
   DISABLED_OPACITY,
-} from '../../tokens/colors';
+} from '../../../tokens/colors';
 
 export const StyledLabel = styled.label`
   font-weight: 500;
@@ -33,4 +33,10 @@ export const StyledInput = styled.input`
   &:disabled {
     opacity: ${DISABLED_OPACITY};
   }
+`;
+
+export const StyledTextArea = styled(StyledInput as 'textarea').attrs({
+  as: 'textarea',
+})<{ isResizable?: boolean }>`
+  resize: ${({ isResizable }) => !isResizable && 'none'};
 `;
