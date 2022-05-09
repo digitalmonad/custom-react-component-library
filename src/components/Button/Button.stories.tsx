@@ -14,5 +14,5 @@ const Template: Story = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  disabled: true,
+  disabled: false,
 };
