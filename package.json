@@ -1,6 +1,6 @@
 {
   "name": "@digitalmonad/component-library",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "description": "Custom React component library boilerplate",
   "author": "Pavel Kocman",
   "main": "dist/index.cjs.js",
