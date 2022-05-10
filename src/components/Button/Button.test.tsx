@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './Button.component';
-import React from 'react';
 
 describe('Button', () => {
   test('applies default type of button', () => {

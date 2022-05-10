@@ -15,7 +15,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaPropsT>(
   }
 );
 
-TextArea.displayName = 'Field.Input';
+TextArea.displayName = 'Field.TextArea';
 TextArea.defaultProps = {
   isResizable: false,
 };
