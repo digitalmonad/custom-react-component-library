@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { FieldContext } from '../../../utils/context/fieldContext';
 import { useUniqueId } from '../../../utils/hooks/useUniqueId';
 

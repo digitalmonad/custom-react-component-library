@@ -1,16 +1,22 @@
 {
   "name": "@digitalmonad/component-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom React component library boilerplate",
   "author": "Pavel Kocman",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
   "scripts": {
-    "format": "prettier --write .",
-    "lint:format": "prettier --check .",
-    "lint": "eslint src/**",
+    "build": "npm run build:js",
+    "build:js": "rollup -c rollup.config.js",
+    "test:jest": "jest",
+    "test:ts": "tsc",
+    "test": "npm run test:ts && npm run test:jest",
+    "lint:format": "prettier --check \"src/**/*\"",
+    "lint:js": "eslint src/**",
+    "lint": "npm run lint:format && npm run lint:js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test": "jest"
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -29,6 +35,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
@@ -44,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "babel-loader": "^8.2.5",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -52,10 +66,14 @@
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "prettier": "^2.6.2",
+    "rollup": "^2.72.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-node-externals": "^2.2.0",
     "ts-jest": "^28.0.2",
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@babel/runtime": "^7.17.9",
     "nanoid": "^3.3.4",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1"
