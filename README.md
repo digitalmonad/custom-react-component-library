@@ -1,1 +1,1 @@
-# private-react-component-library
+# custom-react-component-library
